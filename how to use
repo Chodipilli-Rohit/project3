@@ -1,0 +1,45 @@
+How to Use
+Install Dependencies:
+bash:
+'
+pip install zxcvbn nltk
+'
+  The script automatically downloads the NLTK words corpus if not present.
+Run in GUI Mode:
+bash:
+ '
+python password_analyzer.py
+'
+  Enter a password, name, DOB, and pet name in the GUI.
+Click "Analyze Password" to see strength metrics.
+Click "Generate Wordlist" to create a wordlist, then "Save Wordlist to File" to export as .txt.
+Run in CLI Mode:
+bash:
+'
+python password_analyzer.py --password "MyPass123" --name "John" --dob "1990-01-01" --pet "Max" --output "custom_wordlist.txt"
+'
+  Analyzes the password and prints strength metrics.
+Generates a wordlist based on inputs and saves it to custom_wordlist.txt.
+Example Output:
+
+Password Analysis:
+Strength: Good (Score: 3/4)
+Estimated Crack Time: 3 months
+Entropy: 47.63 bits
+Suggestions:
+- Add a few more characters to make it stronger.
+Wordlist Content (custom_wordlist.txt):
+'
+John
+john
+J0hn
+J0hN
+John1990
+1990John
+Max
+M4x
+Max2023
+password
+p4ssw0rd
+,
+  ...
